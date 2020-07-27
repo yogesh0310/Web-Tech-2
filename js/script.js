@@ -5,7 +5,7 @@ var sec3=document.getElementById("s3");
 sec1.style.display="block";
   let row=1;
         function displayEntry() {
-        	
+        	let flag=0;
         	var regName = /^[a-zA-Z]+ [a-zA-Z]+$/
         	var regPh=/^([0|\+[0-9]{1,5})?([7-9][0-9]{9})$/;
         	var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -95,8 +95,9 @@ sec1.style.display="block";
 
 	            row++;
 	            alert("Your registration is done successfully");
-        		
+        	flag=1;
             }
+            if(flag==1) {
             document.getElementById('fname').value='';
             document.getElementById('mname').value='';
             document.getElementById('lname').value='';
@@ -105,7 +106,7 @@ sec1.style.display="block";
             document.getElementById('email_id').value='';
             document.getElementById('add').value='';
            
-            
+            }
             
             //var f1=document.getElementById('f1');
             //f1.reset();
